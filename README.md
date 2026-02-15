@@ -1,4 +1,4 @@
-# GenAI Content Creator
+# GrowthSync
 
 A full-stack AI-powered content creation platform for multi-platform social media management, built on the MERN stack (MongoDB, Express, React, Node.js).
 
@@ -139,31 +139,6 @@ Frontend Layer → Backend API → Business Logic Layer → AI/ML Layer
 - Redis (for caching)
 - OpenAI API key
 
-### Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd genai-content-creator
-
-# Install backend dependencies
-npm install
-
-# Install frontend dependencies
-cd client
-npm install
-cd ..
-
-# Install Python ML service dependencies
-cd ml-service
-pip install -r requirements.txt
-cd ..
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your API keys and configuration
-```
-
 ### Environment Variables
 
 Create a `.env` file in the root directory:
@@ -203,32 +178,6 @@ EMAIL_FROM=noreply@yourapp.com
 ML_SERVICE_URL=http://localhost:8000
 ```
 
-### Running the Application
-
-```bash
-# Start MongoDB
-mongod
-
-# Start Redis
-redis-server
-
-# Start Python ML service
-cd ml-service
-uvicorn main:app --reload --port 8000
-cd ..
-
-# Start backend server
-npm run dev
-
-# Start frontend (in a new terminal)
-cd client
-npm start
-```
-
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
-- ML Service: http://localhost:8000
 
 ## API Documentation
 
@@ -304,34 +253,6 @@ POST   /api/email/templates/create       - Create email template
 GET    /api/email/history                - Get email history
 ```
 
-## Testing
-
-The project uses a dual testing approach:
-
-### Unit Tests
-```bash
-# Run all unit tests
-npm test
-
-# Run with coverage
-npm run test:coverage
-
-# Run frontend tests
-cd client && npm test
-
-# Run backend tests
-npm run test:backend
-```
-
-### Property-Based Tests
-```bash
-# Run property-based tests
-npm run test:properties
-
-# Run with specific seed for reproducibility
-npm run test:properties -- --seed=12345
-```
-
 Testing frameworks:
 - **JavaScript/TypeScript**: Jest + fast-check
 - **Python ML Service**: pytest + Hypothesis
@@ -388,16 +309,6 @@ Retry strategies:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For issues and questions:
-- GitHub Issues: [repository-url]/issues
-- Documentation: [documentation-url]
-- Email: support@yourapp.com
 
 ## Roadmap
 
